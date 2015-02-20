@@ -19,7 +19,10 @@ namespace demo
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/foundation").Include(
+            bundles.Add(new ScriptBundle("~/bundles/foundation-core").Include(
+                      "~/Scripts/foundation.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/foundation-addons").Include(
                       "~/Scripts/foundation/foundation.*"));
 
             bundles.Add(new StyleBundle("~/Content/normalize").Include(

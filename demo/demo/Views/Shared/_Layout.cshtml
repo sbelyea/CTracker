@@ -20,121 +20,74 @@
     </script>
 </head>
 <body>
-    <nav class="top-bar" data-topbar>
-        <ul class="title-area">
+    <div class="off-canvas-wrap" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="left-small">
+                    <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
 
-            <li class="name">
-                <h1>
-                    <a href="#">
-                        Top Bar Title
-                    </a>
-                </h1>
-            </li>
-            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
+                <section class="middle tab-bar-section">
+                    <h1 class="title">Foundation</h1>
+                </section>
 
-        <section class="top-bar-section">
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                </section>
+            </nav>
 
-            <ul class="right">
-                <li class="divider"></li>
-                <li class="has-dropdown">
-                    <a href="#">Main Item 1</a>
-                    <ul class="dropdown">
-                        <li><label>Section Name</label></li>
-                        <li class="has-dropdown">
-                            <a href="#" class="">Has Dropdown, Level 1</a>
-                            <ul class="dropdown">
-                                <li><a href="#">Dropdown Options</a></li>
-                                <li><a href="#">Dropdown Options</a></li>
-                                <li><a href="#">Level 2</a></li>
-                                <li><a href="#">Subdropdown Option</a></li>
-                                <li><a href="#">Subdropdown Option</a></li>
-                                <li><a href="#">Subdropdown Option</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li class="divider"></li>
-                        <li><label>Section Name</label></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">See all →</a></li>
-                    </ul>
-                </li>
-                <li class="divider"></li>
-                <li><a href="#">Main Item 2</a></li>
-                <li class="divider"></li>
-                <li class="has-dropdown">
-                    <a href="#">Main Item 3</a>
-                    <ul class="dropdown">
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li><a href="#">Dropdown Option</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">See all →</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </nav>
-
-    
-    @*<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+            <aside class="left-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><label>Foundation</label></li>
+                    <li><a href="#">The Psychohistorians</a></li>
+                    <li><a href="#">...</a></li>
                 </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
+            </aside>
+
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><label>Users</label></li>
+                    <li><a href="#">Hari Seldon</a></li>
+                    <li><a href="#">...</a></li>
+                </ul>
+            </aside>
+
+            <section class="main-section">
+                @RenderBody()
+            </section>
+
+            <a class="exit-off-canvas"></a>
+
         </div>
-    </div>*@
-    
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-
-
-        <footer class="row">
-            <div class="large-12 columns">
-                <hr>
-                <div class="row">
-
-                    <div class="large-6 columns">
-                        <p>© Copyright no one at all. Go to town.</p>
-                    </div>
-
-                    <div class="large-6 small-12 columns">
-                        <ul class="inline-list right">
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </footer>
-
-
-
     </div>
 
+    <footer class="row">
+        <div class="large-12 columns">
+            <hr>
+            <div class="row">
+
+                <div class="large-6 columns">
+                    <p>© Copyright no one at all. Go to town.</p>
+                </div>
+
+                <div class="large-6 small-12 columns">
+                    <ul class="inline-list right">
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </footer>    
+
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/foundation")
-    @RenderSection("scripts", required: false)
+    @Scripts.Render("~/bundles/foundation-core")
+    @Scripts.Render("~/bundles/foundation-addons")    
+    <script>
+    $(document).foundation();
+    </script>
 </body>
 </html>

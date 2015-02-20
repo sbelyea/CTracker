@@ -304,7 +304,7 @@
     <Content Include="Scripts\foundation\foundation.equalizer.js" />
     <Content Include="Scripts\foundation\foundation.interchange.js" />
     <Content Include="Scripts\foundation\foundation.joyride.js" />
-    <Content Include="Scripts\foundation\foundation.js" />
+    <Content Include="Scripts\foundation.js" />
     <Content Include="Scripts\foundation\foundation.magellan.js" />
     <Content Include="Scripts\foundation\foundation.offcanvas.js" />
     <Content Include="Scripts\foundation\foundation.orbit.js" />
