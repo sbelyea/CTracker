@@ -4,22 +4,84 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/normalize")
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
     <script type="text/javascript">
-        var appInsights=window.appInsights||function(config){
-            function s(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},r=document,f=window,e="script",o=r.createElement(e),i,u;for(o.src=config.url||"//az416426.vo.msecnd.net/scripts/a/ai.0.js",r.getElementsByTagName(e)[0].parentNode.appendChild(o),t.cookie=r.cookie,t.queue=[],i=["Event","Exception","Metric","PageView","Trace"];i.length;)s("track"+i.pop());return config.disableExceptionTracking||(i="onerror",s("_"+i),u=f[i],f[i]=function(config,r,f,e,o){var s=u&&u(config,r,f,e,o);return s!==!0&&t["_"+i](config,r,f,e,o),s}),t
+        var appInsights = window.appInsights || function (config) {
+            function s(config) { t[config] = function () { var i = arguments; t.queue.push(function () { t[config].apply(t, i) }) } } var t = { config: config }, r = document, f = window, e = "script", o = r.createElement(e), i, u; for (o.src = config.url || "//az416426.vo.msecnd.net/scripts/a/ai.0.js", r.getElementsByTagName(e)[0].parentNode.appendChild(o), t.cookie = r.cookie, t.queue = [], i = ["Event", "Exception", "Metric", "PageView", "Trace"]; i.length;) s("track" + i.pop()); return config.disableExceptionTracking || (i = "onerror", s("_" + i), u = f[i], f[i] = function (config, r, f, e, o) { var s = u && u(config, r, f, e, o); return s !== !0 && t["_" + i](config, r, f, e, o), s }), t
         }({
-            instrumentationKey:"c506c221-2187-4716-bcc2-9550257dee16"
+            instrumentationKey: "c506c221-2187-4716-bcc2-9550257dee16"
         });
-        
-        window.appInsights=appInsights;
+
+        window.appInsights = appInsights;
         appInsights.trackPageView();
     </script>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+
+            <li class="name">
+                <h1>
+                    <a href="#">
+                        Top Bar Title
+                    </a>
+                </h1>
+            </li>
+            <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+
+            <ul class="right">
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <a href="#">Main Item 1</a>
+                    <ul class="dropdown">
+                        <li><label>Section Name</label></li>
+                        <li class="has-dropdown">
+                            <a href="#" class="">Has Dropdown, Level 1</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Dropdown Options</a></li>
+                                <li><a href="#">Dropdown Options</a></li>
+                                <li><a href="#">Level 2</a></li>
+                                <li><a href="#">Subdropdown Option</a></li>
+                                <li><a href="#">Subdropdown Option</a></li>
+                                <li><a href="#">Subdropdown Option</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li class="divider"></li>
+                        <li><label>Section Name</label></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">See all →</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">Main Item 2</a></li>
+                <li class="divider"></li>
+                <li class="has-dropdown">
+                    <a href="#">Main Item 3</a>
+                    <ul class="dropdown">
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li><a href="#">Dropdown Option</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">See all →</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+    </nav>
+
+    
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -38,17 +100,41 @@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
-    </div>
+    </div>*@
+    
     <div class="container body-content">
         @RenderBody()
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+
+        <footer class="row">
+            <div class="large-12 columns">
+                <hr>
+                <div class="row">
+
+                    <div class="large-6 columns">
+                        <p>© Copyright no one at all. Go to town.</p>
+                    </div>
+
+                    <div class="large-6 small-12 columns">
+                        <ul class="inline-list right">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </footer>
+
+
+
     </div>
 
     @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/foundation")
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -213,12 +213,21 @@
   <ItemGroup>
     <Content Include="Content\foundation.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\scss\foundation.css">
+      <DependentUpon>foundation.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\foundation.min.css">
+      <DependentUpon>foundation.css</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\normalize.css">
+      <DependentUpon>normalize.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\normalize.min.css">
+      <DependentUpon>normalize.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config" />
     <Content Include="Content\scss\foundation.scss">
       <Compile>True</Compile>
@@ -278,6 +287,12 @@
       <IgnoreErrors>True</IgnoreErrors>
       <CompileStyle>Nested</CompileStyle>
       <DebugInfo>False</DebugInfo>
+    </Content>
+    <Content Include="Content\scss\normalize.css.map">
+      <DependentUpon>normalize.css</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\foundation.css.map">
+      <DependentUpon>foundation.css</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\x005.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
