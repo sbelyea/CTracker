@@ -211,8 +211,15 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\custom.css" />
     <Content Include="Content\foundation.css" />
     <Content Include="Content\normalize.css" />
+    <Content Include="Content\scss\custom.css">
+      <DependentUpon>custom.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\custom.min.css">
+      <DependentUpon>custom.css</DependentUpon>
+    </Content>
     <Content Include="Content\scss\foundation.css">
       <DependentUpon>foundation.scss</DependentUpon>
     </Content>
@@ -294,6 +301,18 @@
     <Content Include="Content\scss\foundation.css.map">
       <DependentUpon>foundation.css</DependentUpon>
     </Content>
+    <Content Include="Content\scss\custom.scss">
+      <Compile>True</Compile>
+      <Minify>True</Minify>
+      <OutputFolder>..</OutputFolder>
+      <IgnoreWarnings>True</IgnoreWarnings>
+      <IgnoreErrors>True</IgnoreErrors>
+      <CompileStyle>Nested</CompileStyle>
+      <DebugInfo>False</DebugInfo>
+    </Content>
+    <Content Include="Content\scss\custom.css.map">
+      <DependentUpon>custom.css</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\x005.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\foundation\foundation.abide.js" />
@@ -324,7 +343,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>

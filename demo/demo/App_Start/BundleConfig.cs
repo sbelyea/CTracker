@@ -30,6 +30,9 @@ namespace demo
             
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/foundation.css"));
+
+            bundles.Add(new StyleBundle("~/Content/custom").Include(
+                      "~/Content/custom.css"));
         }
     }
 }
