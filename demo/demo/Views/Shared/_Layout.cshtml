@@ -29,14 +29,14 @@
                 </section>
 
                 <section class="middle tab-bar-section">
-                    <h1 class="title">cTrackr</h1>
+                    <h1 class="title">@Html.ActionLink("cTracker", "Index", "Home")</h1>
                 </section>
             </nav>
 
             <aside class="left-off-canvas-menu">
                 <ul class="off-canvas-list">
                     <li><label>Menu</label></li>
-                    
+                    <li>@Html.Partial("_LoginPartial")</li>
                     <li><a href="#">News</a></li>
                     <li><a href="#">My Inventory</a></li>
                     <li><a href="#">My Account</a></li>
@@ -76,9 +76,10 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/foundation-core")
-    @Scripts.Render("~/bundles/foundation-addons")    
+    @Scripts.Render("~/bundles/foundation-addons")
     <script>
     $(document).foundation();
     </script>
+    @RenderSection("scripts", required: false)
 </body>
 </html>
