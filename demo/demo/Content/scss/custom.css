@@ -1,4 +1,8 @@
-﻿body {
+body {
   color: #2B2922; }
+
+/* Authentication Styling */
+.auth-item {
+  background-color: #A32500; }
 
 /*# sourceMappingURL=custom.css.map */
