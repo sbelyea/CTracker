@@ -232,6 +232,12 @@
     <Content Include="Content\scss\normalize.min.css">
       <DependentUpon>normalize.css</DependentUpon>
     </Content>
+    <Content Include="Content\scss\variables.css">
+      <DependentUpon>variables.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -308,10 +314,14 @@
       <IgnoreWarnings>True</IgnoreWarnings>
       <IgnoreErrors>True</IgnoreErrors>
       <CompileStyle>Nested</CompileStyle>
-      <DebugInfo>False</DebugInfo>
+      <DebugInfo>True</DebugInfo>
     </Content>
     <Content Include="Content\scss\custom.css.map">
       <DependentUpon>custom.css</DependentUpon>
+    </Content>
+    <Content Include="Content\scss\variables.scss" />
+    <Content Include="Content\scss\variables.css.map">
+      <DependentUpon>variables.css</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\x005.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
