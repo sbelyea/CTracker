@@ -5,4 +5,9 @@ body {
 .auth-item {
   background-color: #A32500; }
 
+.auth-info a {
+  font-size: 0.75em !important;
+  color: #BAB293; }
+
+/* End Authentication Styling */
 /*# sourceMappingURL=custom.css.map */
