@@ -1,4 +1,5 @@
-﻿using System;
+﻿using demo.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,9 +9,14 @@ namespace demo.Controllers
 {
     public class HomeController : Controller
     {
+
+        CTrackrDB _db = new CTrackrDB();
+
         public ActionResult Index()
         {
-            return View();
+            var model = _db.Cigars.ToList();
+
+            return View(model);
         }
 
         public ActionResult About()

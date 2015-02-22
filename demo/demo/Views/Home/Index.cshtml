@@ -18,7 +18,14 @@
     </div>
 
     <div class="small-12 medium-4 columns">
-        <h4>Recent Activity</h4>
-        <p>This section to be replaced by a partial view of your most recent activity/inventory change.</p>
+        <h4>Listing of Cigars</h4>
+        @foreach (var item in Model)
+        {
+            <div>
+                <h5>@item.Name</h5>
+                <p>@item.Description</p>
+                <hr />
+            </div>
+        }
     </div>
 </div>
