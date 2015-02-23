@@ -328,6 +328,7 @@
       <DependentUpon>variables.css</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\x005.pubxml" />
+    <None Include="Properties\PublishProfiles\x006.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\foundation\foundation.abide.js" />
     <Content Include="Scripts\foundation\foundation.accordion.js" />
